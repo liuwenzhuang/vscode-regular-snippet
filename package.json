@@ -1,0 +1,26 @@
+{
+  "name": "vscode-regular-snippet",
+  "email": "liu1114589929@gmail.com",
+  "displayName": "RegularJS Snippet",
+  "description": "Snippet for RegularJS",
+  "version": "0.0.1",
+  "publisher": "liuwenzhuang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuwenzhuang/vscode-regular-snippet.git"
+  },
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "html",
+        "path": "./snippets.json"
+      }
+    ]
+  }
+}

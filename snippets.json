@@ -1,0 +1,46 @@
+{
+  "hif": {
+    "scope": "html",
+    "prefix": ["hif", "#if", "if"],
+    "body": ["{#if ${1:flag}}", "\t$0", "{/if}"],
+    "description": "Regular template if statement"
+  },
+  "hifelse": {
+    "scope": "html",
+    "prefix": ["hifelse", "#ifelse", "else"],
+    "body": ["{#if ${1:flag}}", "\t$2", "{#else}", "\t$3", "{/if}"],
+    "description": "Regular template if...else statement"
+  },
+  "hlist": {
+    "scope": "html",
+    "prefix": ["hlist", "#list", "list"],
+    "body": ["{#list ${1:arr} as ${2:item}}", "\t$0", "{/list}"],
+    "description": "Regular template list statement"
+  },
+  "hlistelse": {
+    "scope": "html",
+    "prefix": ["hlistelse", "#listelse", "elselist"],
+    "body": ["{#list ${1:arr} as ${2:item}}", "\t$3", "{#else}", "\t$4", "{/list}"],
+    "description": "Regular template list...else statement"
+  },
+  "hvariable": {
+    "scope": "html",
+    "prefix": ["hvar", "variable", "var", "=var"],
+    "body": ["=\"{${1:data}}\"$0"],
+    "description": "Regular template reference data property"
+  },
+  "hdirective": {
+    "scope": "html",
+    "prefix": ["r-", "rdirective"],
+    "body": ["r-${1|model,hide,class,style|}=\"$2\""],
+    "description": "Regular template use directive"
+  },
+  "hevent": {
+    "scope": "html",
+    "prefix": ["on-", "revent"],
+    "body": [
+      "on-${1|click,select,change,mouseenter,mouseleave,contextMenu|}=\"{this.${2:onEvent}(${3:\\$event})}\""
+    ],
+    "description": "Regular template bind event"
+  }
+}
